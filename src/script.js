@@ -40,13 +40,11 @@ const cellLive = [2, 3]; // If cell alive, it survive if...
 function reSizeCanvas() {
 
 	// canvas_wrap_wrap
-	displayWidth = Math.round(canvas.
-							  parentElement.
-							  parentElement.getBoundingClientRect().width);
+	displayWidth = Math.round(canvas.parentElement.
+					 parentElement.getBoundingClientRect().width);
 
-	displayHeight = Math.round(canvas.
-							   parentElement.
-							   parentElement.getBoundingClientRect().height);
+	displayHeight = Math.round(canvas.parentElement.
+					  parentElement.getBoundingClientRect().height);
 
 	// Fitting width
 	while(displayWidth % gridScale !== gridSize) {
@@ -107,7 +105,7 @@ function drawField() {
 			}
 
 			ctx.fillRect(x * gridScale + gridSize, 
-						 y * gridScale + gridSize, scale, scale);
+				     y * gridScale + gridSize, scale, scale);
 		}
 	}
 }
@@ -142,7 +140,7 @@ function setCell(event) {
 	}
 
 	ctx.fillRect(x * gridScale + gridSize, 
-				 y * gridScale + gridSize, scale, scale);
+		     y * gridScale + gridSize, scale, scale);
 }
 
 // Filling field random cells
