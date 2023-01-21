@@ -1,0 +1,141 @@
+/* Colors */
+:root {
+	--dark-grey: #242727;
+	--grey: #2F3334;
+	--light-grey: #9A9999;
+	--turquoise: #0A6B78;
+	--light-turquoise: #3BACBC;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "OpenSans-light";
+	src: url("Fonts/opensans-light.ttf");
+}
+
+@font-face {
+	font-family: "OpenSans-extrabold";
+	src: url("Fonts/opensans-extrabold.ttf");
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+body {
+	background: var(--dark-grey);
+	margin: 0px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	max-width: 1920px;
+	min-height: 110vh;
+	width: 95vw;
+	background: var(--grey);
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; 
+}
+
+/* Navigation bar */
+.nav {
+	width: 100vw;
+	padding: 5px;
+
+	background: var(--dark-grey);
+	color: white;
+	text-align: center;
+
+	font-family: "OpenSans-extrabold", "Segoi UI", "helvetica", sans-serif;
+	font-size: 32px;
+}
+
+/* Canvas */
+.canv {
+	background: white;
+}
+
+.canvas_wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+.canvas_wrap_wrap {
+	width: 100%;
+	height: 85%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Control elements */
+
+.controls_container {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px; 
+	background: var(--grey);
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center; 
+	flex-wrap: wrap;
+}
+
+.control_button {
+	max-width: 210px;
+	min-width: 120px;
+	height: 35px;
+	margin: 5px;
+
+	border: 0px;
+	border-radius: 5px;
+
+	box-shadow: 0px 0px 7px -1px black;
+	background: var(--turquoise);
+
+	color: white;
+	font-family: "OpenSans-light", "Segoi UI", "helvetica", sans-serif;
+}
+
+.control_button:hover {
+	background: var(--light-turquoise);
+	transition-duration: .2s;
+}
+
+.control_button:disabled {
+	background: var(--light-grey);
+	transition-duration: .2s;
+}
+
+.control_input {
+	max-width: 210px;
+	min-width: 120px;
+	height: 35px;
+	margin: 5px;
+
+	border: 1px solid var(--turquoise);
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px -1px black;
+
+	font-family: "OpenSans-light", "Segoi UI", "helvetica", sans-serif;
+}
+
+.control_input:hover {
+	border-color: var(--light-turquoise);
+	transition-duration: .2s;
+}
+
+.control_input:disabled {
+	border-color: var(--light-grey);
+	transition-duration: .2s;
+}
