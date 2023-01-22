@@ -1,7 +1,4 @@
-<h2 align="center">
-<img src="https://github.com/invizex/game-of-life/blob/master/src/img/icon_16x16.ico">
-Game of life
-</h2>
+<h2 align="center">Game of life</h2>
 
 ### Some history
 "Game of life" is a cellular automaton, invented by the English mathematician John Conway in 1970.
