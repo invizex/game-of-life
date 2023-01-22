@@ -9,8 +9,8 @@
 
 /* Fonts */
 @font-face {
-	font-family: "OpenSans-light";
-	src: url("Fonts/opensans-light.ttf");
+	font-family: "OpenSans-regular";
+	src: url("Fonts/opensans-regular.ttf");
 }
 
 @font-face {
@@ -42,10 +42,10 @@ body {
 	flex-wrap: wrap; 
 }
 
-/* Navigation bar */
-.nav {
+.banner {
 	width: 100vw;
 	padding: 5px;
+	margin: 0px;
 
 	background: var(--dark-grey);
 	color: white;
@@ -53,6 +53,7 @@ body {
 
 	font-family: "OpenSans-extrabold", "Segoi UI", "helvetica", sans-serif;
 	font-size: 32px;
+	text-shadow: 0px 0px 5px black;
 }
 
 /* Canvas */
@@ -104,7 +105,7 @@ body {
 	background: var(--turquoise);
 
 	color: white;
-	font-family: "OpenSans-light", "Segoi UI", "helvetica", sans-serif;
+	font-family: "OpenSans-regular", "Segoi UI", "helvetica", sans-serif;
 }
 
 .control_button:hover {
@@ -127,7 +128,7 @@ body {
 	border-radius: 5px;
 	box-shadow: 0px 0px 7px -1px black;
 
-	font-family: "OpenSans-light", "Segoi UI", "helvetica", sans-serif;
+	font-family: "OpenSans-regular", "Segoi UI", "helvetica", sans-serif;
 }
 
 .control_input:hover {
