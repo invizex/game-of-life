@@ -15,7 +15,7 @@ document.querySelector("#delay").addEventListener('input', setDelay, event); // 
 
 /* Main game cycle */
 let timer; // Game cycle 
-let hasTimerActive = false; // Check the timer is active
+let isTimerActive = false; // Check the timer is active
 let delay = 100; // Update delay (ms)
 
 /* Game field */
@@ -71,15 +71,6 @@ function reSizeCanvas() {
 
 	field = clearField();
 	drawField();
-}
-
-// Set update delay
-function setDelay(event) {
-	let newDelay = event.srcElement.value;
-
-	if(!isNaN(newDelay)) {
-		delay = Number(newDelay);
-	}
 }
 
 // Draw cell grid on canvas
@@ -160,9 +151,9 @@ function randomFilling() {
 
 // Starting game
 function startGame() {
-	if(!hasTimerActive) {
+	if(!isTimerActive) {
 		timer = setInterval(gameStep, delay);
-		hasTimerActive = true;
+		isTimerActive = true;
 
 		document.querySelector("#start").disabled = true;
 		document.querySelector("#stop").disabled = false;
@@ -171,12 +162,28 @@ function startGame() {
 
 // Stoping game
 function stopGame() {
-	if(hasTimerActive) {
+	if(isTimerActive) {
 		clearInterval(timer);
-		hasTimerActive = false;
+		isTimerActive = false;
 
 		document.querySelector("#start").disabled = false;
 		document.querySelector("#stop").disabled = true;
+	}
+}
+
+// Set update delay
+function setDelay(event) {
+	let newDelay = event.srcElement.value;
+
+	if(!isNaN(newDelay)) {
+		delay = Number(newDelay);
+
+		// If timer is active, create new
+		// with new delay value
+		if(isTimerActive){
+			clearInterval(timer);
+			timer = setInterval(gameStep, delay);
+		}
 	}
 }
 
